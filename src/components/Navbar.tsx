@@ -1,5 +1,6 @@
 'use client'
 import React from 'react'
+import Link from "next/link"
 
 const Navbar = () => {
   return (
@@ -7,6 +8,8 @@ const Navbar = () => {
         <div>
             <h1>MyApp</h1>
             <div>
+                <Link href='#about'>About</Link>
+                <Link href="#services">Services</Link>
                 
             </div>
         </div>

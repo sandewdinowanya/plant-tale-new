@@ -1,13 +1,31 @@
 import React from 'react'
 import Link from 'next/link'
+import Navbar from '../components/Navbar'
 
 const HomePage = () => {
   return (
-    <main>
+    <>
+    <Navbar />
+      <main>
       <div>HomePage</div>
-      <Link href='./login'>Login</Link><p></p>
-      <Link href="./signup">Sign Up</Link>
+      <section className="hero">
+        <h1> Home</h1>
+      </section>
+
+      <section id="about">
+        <h2>About Us</h2>
+      </section>
+
+      <section id="services">
+        <h2>Services</h2>
+      </section>
+
+      <section id="features">
+        <h2>Features</h2>
+      </section>
+
     </main> 
+</>
     
   )
 }
