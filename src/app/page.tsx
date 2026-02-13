@@ -7,9 +7,15 @@ const HomePage = () => {
     <>
     <Navbar />
       <main>
-      <div>HomePage</div>
       <section className="hero">
-        <h1> Home</h1>
+        <p style={{ fontSize: '0.95rem', color: '#7da87e', textTransform: 'uppercase', letterSpacing: '2px', marginBottom: '1rem' }}>
+          NURTURE YOUR GARDEN
+        </p>
+        <h1>BLOOM - REAL PASSION</h1>
+        <p>
+          Plant Tale is your intelligent gardening companion powered by AI and weather-aware technology helping home gardeners recognize plants, understand their unique needs, and care for them effortlessly. Whether you're a beginner or a seasoned green thumb, Plant Tale guides you with personalized tips, photo-based plant identification, and timely reminders to keep your garden blooming beautifully all year round.
+        </p>
+        <a href="#about" className="view-more">View More</a>
       </section>
 
       <section id="about">

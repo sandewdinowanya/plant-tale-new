@@ -6,11 +6,14 @@ const Navbar = () => {
   return (
     <nav>
         <div>
-            <h1>MyApp</h1>
+            <h1>🌿 Plant Tale</h1>
             <div>
-                <Link href='#about'>About</Link>
-                <Link href="#services">Services</Link>
-                
+                <Link href='/'>Home</Link>
+                <Link href='#services'>Services</Link>
+                <Link href="#features">Features</Link>
+
+                <Link href="/login" className="login">Login</Link>
+                <Link href="/signup" className="signup">Sign Up</Link> 
             </div>
         </div>
     </nav>
