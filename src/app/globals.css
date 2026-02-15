@@ -197,7 +197,7 @@ section > p {
 
 .service-cards {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 2rem;
   margin-top: 2rem;
 }
@@ -221,8 +221,8 @@ section > p {
 }
 
 .service-cards img {
-  width: 100%;
-  height: 200px;
+  width: auto;
+  height: 100px;
   object-fit: cover;
   border-radius: 6px;
   margin-bottom: 1.5rem;
@@ -247,46 +247,168 @@ section > p {
   padding: 6rem 2rem;
 }
 
-#features h2 {
-  text-align: center;
-  margin-bottom: 1rem;
+.features-container {
+  display: flex;
+  gap: 4rem;
+  align-items: flex-start;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
-#features > div > p:nth-of-type(1) {
-  text-align: center;
-  max-width: 600px;
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: 3rem;
+.features-image {
+  flex: 0 0 45%;
+  position: sticky;
+  top: 100px;
 }
 
-#features > div > p:not(:nth-of-type(1)) {
-  font-size: 1rem;
+.features-image img {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+}
+
+.features-content {
+  flex: 1;
+}
+
+.features-content h2 {
+  font-size: 2.5rem;
   color: #2d3436;
+  margin-bottom: 1rem;
   font-weight: 600;
-  margin-bottom: 1.5rem;
-  padding-left: 1rem;
-  border-left: 4px solid #7da87e;
 }
 
-#features > div > p:not(:nth-of-type(1)) strong {
-  color: #7da87e;
-  font-size: 1.1rem;
-  margin-right: 0.5rem;
+.features-content > p {
+  font-size: 1rem;
+  color: #7a7a7a;
+  margin-bottom: 3rem;
+  line-height: 1.6;
 }
 
-#features > p:not(:nth-of-type(1))::before {
-  content: attr(data-number);
-  display: inline-block;
+.feature-item {
+  display: flex;
+  gap: 1.5rem;
+  margin-bottom: 2.5rem;
+  align-items: flex-start;
+}
+
+.feature-number {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   background-color: #7da87e;
   color: white;
   border-radius: 50%;
-  width: 30px;
-  height: 30px;
-  line-height: 30px;
-  text-align: center;
-  margin-right: 0.75rem;
+  width: 45px;
+  height: 45px;
   font-weight: 700;
+  font-size: 1.1rem;
+  flex-shrink: 0;
+}
+
+.feature-text {
+  flex: 1;
+}
+
+.feature-text strong {
+  display: block;
+  color: #2d3436;
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+}
+
+.feature-text p {
+  font-size: 0.95rem;
+  color: #666;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* Footer */
+footer {
+  background-color: #ffffff;
+  padding: 5rem 2rem 2rem;
+  margin-top: 4rem;
+}
+
+footer > div {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+footer {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1.3fr;
+  gap: 3rem;
+  align-items: start;
+}
+
+footer h1 {
+  font-size: 2rem;
+  color: #2d9a44;
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+footer h2 {
+  font-size: 1rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #2d3436;
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+footer p {
+  color: #5b5b5b;
+  font-size: 0.95rem;
+  line-height: 1.8;
+}
+
+.grid-1 p {
+  color: #7a7a7a;
+}
+
+.grid-2 p {
+  margin-bottom: 0.75rem;
+}
+
+.grid-3 p {
+  margin-bottom: 0.75rem;
+}
+
+.social-media-icons {
+  display: flex;
+  gap: 0.75rem;
+  margin-top: 1.5rem;
+}
+
+.social-media-icons p {
+  width: 34px;
+  height: 34px;
+  border: 1px solid #7da87e;
+  color: #7da87e;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.85rem;
+  font-weight: 600;
+  margin: 0;
+}
+
+.copy-right {
+  grid-column: 1 / -1;
+  border-top: 1px solid #e6ece8;
+  margin-top: 2rem;
+  padding-top: 1.5rem;
+  text-align: center;
+}
+
+.copy-right p {
+  color: #7a7a7a;
   font-size: 0.9rem;
 }
 
@@ -342,7 +464,42 @@ section > p {
     font-size: 1.1rem;
   }
 
-  #features > div > p:not(:nth-of-type(1)) {
+  .features-container {
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .features-image {
+    flex: unset;
+    position: static;
+    width: 100%;
+  }
+
+  .features-content h2 {
+    font-size: 1.8rem;
+  }
+
+  .feature-number {
+    width: 35px;
+    height: 35px;
+    font-size: 0.95rem;
+  }
+
+  .feature-text strong {
+    font-size: 1.05rem;
+  }
+
+  .feature-text p {
     font-size: 0.9rem;
+  }
+
+  footer {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    padding: 4rem 1.5rem 2rem;
+  }
+
+  .copy-right {
+    text-align: left;
   }
 }
