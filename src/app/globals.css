@@ -139,6 +139,7 @@ main {
 
 /* Sections */
 section {
+  background-color: #f5f1ed;
   width: 100%;
   padding: 5rem 2rem;
   margin: 0;
@@ -178,7 +179,7 @@ section > p {
 
 /* Service Cards Section */
 #services {
-  background-color: #fff;
+  background-color: #f5f1ed;
   padding: 6rem 2rem;
 }
 
@@ -205,7 +206,7 @@ section > p {
 .service-cards .card-1,
 .service-cards .card-2,
 .service-cards .card-3 {
-  background-color: #f9f7f4;
+  background-color: #ffffff;
   border-radius: 8px;
   padding: 2rem;
   text-align: center;
